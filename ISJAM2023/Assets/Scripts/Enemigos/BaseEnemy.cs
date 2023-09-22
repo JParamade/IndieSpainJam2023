@@ -3,12 +3,15 @@ using UnityEngine.Events;
 
 public class BaseEnemy : MonoBehaviour
 {
+    public float CurrentHealthRatio { get { return (float)_currentHealth / _maxHealth; } }
+
+    [Header("Eventos")]
     public HealthChangedEvent OnTakeDamage;
     public UnityEvent OnDie;
 
-    public float CurrentHealthRatio { get { return (float)_currentHealth / _maxHealth; } }
-
+    [Header("Configuracion")]
     [SerializeField] private int _maxHealth = 50;
+
     private int _currentHealth;
 
     private void Awake()
