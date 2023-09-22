@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 public class BaseEnemy : MonoBehaviour
 {
-    public HealthChangedEvent OnHealthChanged;
+    public HealthChangedEvent OnTakeDamage;
     public UnityEvent OnDie;
 
     public float CurrentHealthRatio { get { return (float)_currentHealth / _maxHealth; } }
@@ -23,7 +23,7 @@ public class BaseEnemy : MonoBehaviour
         _currentHealth = Mathf.Clamp(_currentHealth - amount, 0, _maxHealth);
 
         Debug.Log($"Current Health: <color=#00FF00>{_currentHealth}</color>");
-        OnHealthChanged.Invoke(new HealthChangedEventData(amount, _maxHealth, _currentHealth, CurrentHealthRatio));
+        OnTakeDamage.Invoke(new HealthChangedEventData(amount, _maxHealth, _currentHealth, CurrentHealthRatio));
 
         if (_currentHealth == 0)
         {
