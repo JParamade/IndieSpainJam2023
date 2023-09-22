@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22206f05602ec5a44941708e8d620ae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnHealthChanged:
+  OnTakeDamage:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1408234756942271143}
