@@ -27,7 +27,7 @@ public class PlayerController2ElectricBoogaloo : MonoBehaviour
         transform.rotation = Quaternion.Euler(camRot);
 
         Movement();
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             Jump();
         }
