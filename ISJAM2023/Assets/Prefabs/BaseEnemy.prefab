@@ -296,13 +296,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22206f05602ec5a44941708e8d620ae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnCurrentHealthChanged:
+  OnHealthChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1408234756942271143}
         m_TargetAssemblyTypeName: EnemyHealthUI, Assembly-CSharp
         m_MethodName: UpdateUI
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -616,5 +616,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2929d2738023db549b01c16d7cf0bc53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemy: {fileID: 5097682325209793716}
   _slider: {fileID: 5977655488159561769}
+  _transitionDuration: 0.25
